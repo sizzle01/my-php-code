@@ -1,0 +1,6 @@
+create table mail(
+id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    mail varchar(200) not null,
+    date datetime not null
+);
+insert into mail (mail, date) VALUES ( 'talktoaliyu@gmail.com', '10:05:10');

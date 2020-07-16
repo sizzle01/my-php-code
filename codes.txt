@@ -1,0 +1,33 @@
+<?php
+include_once 'includes/dbh.inc.php';
+?>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <?php
+    $sql = "SELECT * FROM mail;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        while($row = mysqli_getch_assoc($result)){
+            echo $row['mail_id'] ;
+        }
+    }
+    ?>
+</body>
+
+</html>
+<?php
+$dbServername = "localhost";
+$dbUsername = "root";
+$dbPassword = "12345";
+$dbName = "newsletter";
+
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES('daniel', 'Nelson', 'usemmtut@gmail.com', 'Admin', 'test123');
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES('jane', 'Doe', 'jane@gmail.com', 'Jane2451 ', 'test1234');
